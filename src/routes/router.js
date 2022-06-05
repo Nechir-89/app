@@ -1,14 +1,14 @@
-import App from './App';
+import App from '../App';
 import {
   BrowserRouter,
   Routes,
   Route
 } from 'react-router-dom'
-import Expenses from './routes/expenses';
-import Invoices from './routes/invoices';
-import Invoice from './routes/invoice';
-import Home from './routes/home';
-import PageNotFound from './routes/pageNotFound';
+import Expenses from '../pages/expenses/expenses';
+import Invoices from '../pages/invoices/invoices';
+import Invoice from '../pages/invoices/invoice';
+import Home from '../pages/home/home';
+import PageNotFound from '../pages/notFoundPage/pageNotFound';
 export default function Router() {
   return (
     <BrowserRouter>

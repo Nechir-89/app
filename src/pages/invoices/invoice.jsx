@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom';
-import { getInvoices } from '../data';
+import { getInvoices } from '../../models/data';
 
 export default function Invoice() {
   const { invoiceId } = useParams()
