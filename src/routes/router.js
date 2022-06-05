@@ -4,11 +4,11 @@ import {
   Routes,
   Route
 } from 'react-router-dom'
-import Expenses from '../pages/expenses/expenses';
-import Invoices from '../pages/invoices/invoices';
+import Expenses from '../pages/expenses';
+import Invoices from '../pages/invoices';
 import Invoice from '../pages/invoices/invoice';
-import Home from '../pages/home/home';
-import PageNotFound from '../pages/notFoundPage/pageNotFound';
+import Home from '../pages/home';
+import PageNotFound from '../pages/notFoundPage';
 export default function Router() {
   return (
     <BrowserRouter>
