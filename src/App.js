@@ -1,25 +1,40 @@
-import logo from './logo.svg';
 import './App.css';
+import {
+  // BrowserRouter,
+  // Routes,
+  // Route,
+  NavLink, Outlet
+} from 'react-router-dom';
+// import Home from './pages/Home';
+// import MyApp from './pages/MyApp';
+// import Teams from './pages/Teams';
+// import Team from './pages/Team';
+// import NewTeamForm from './pages/NewTeamForm';
+// import LeagueStandings from './pages/LeagueStandings';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div style={appStyle}>
+      <h1>Bookkeeper</h1>
+      <nav>
+        <NavLink to='invoices'
+        style={({isActive})=>({
+          "fontWeight": isActive ? "800": "500"
+        })}
+        >Invoices</NavLink> | {" "}
+        <NavLink to='expenses'
+        style={({isActive})=>({
+          "fontWeight": isActive ? "800": "500"
+        })}
+        >Expenses</NavLink>
+      </nav>
+      <Outlet />
+    </div >
   );
 }
 
+const appStyle = {
+  margin: '1rem'
+}
 export default App;
