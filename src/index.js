@@ -10,6 +10,7 @@ root.render(
     {
       console.log(<App />)
     }
+    {console.log(typeof([]))}
   </React.StrictMode>
 );
 
