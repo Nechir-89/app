@@ -8,9 +8,11 @@ root.render(
   <React.StrictMode>
     <App />
     {
-      console.log(<App />)
+      // console.log(<App />)
     }
-    {console.log(typeof([]))}
+    {
+    // console.log(typeof([]))
+    }
   </React.StrictMode>
 );
 

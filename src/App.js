@@ -1,4 +1,7 @@
 import React from 'react';
+import Button from './components/button';
+
+
 // ES5
 // var MyComponent = React.createClass({
 //   render: function(){
@@ -33,7 +36,8 @@ class MyComponent extends React.Component {
 
 function App() {
   const [user, setUser] = React.useState('Neck');
-  console.log(<h1 className='a'>jsx element</h1>)
+  // console.log(React.useState('Neck'));
+  // console.log(<h1 className='a'>jsx element</h1>)
   return (
     <div style={divStyle}>
       <input type="text" onKeyDown={(e) => console.log(e.target.value)} />
@@ -41,8 +45,9 @@ function App() {
       <input type="text" onKeyPress={(e) => console.log(e.target.value)} />
       <MyComponent />
       {
-
+        console.log(<Button />)
       }
+      <Button />
     </div>
   );
 }
