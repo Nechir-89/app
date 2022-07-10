@@ -1,20 +1,16 @@
+import { useEffect } from "react"
 import { useState } from "react"
-const data = [
-  "apple",
-  "bannana",
-  "orange",
-  "strawbary",
-  "watermelon",
-  "melon",
-  "nuts",
-  "cucumber",
-  "tomato",
-  "potato",
-  "onion",
-]
+let data = [];
 
 function Filter() {
-  const [inValue, setInValue] = useState('')
+  const [inValue, setInValue] = useState('');
+  
+  useEffect(() => {
+    fetch('https://jsonplaceholder.typicode.com/todos')
+      .then(res => res.json())
+      .then(result => data = result)
+  }, [])
+
   return (
     <>
       {/* input */}
@@ -29,9 +25,12 @@ function Filter() {
       {/* Output */}
       {
         inValue && data
-          .filter(item => item.startsWith(inValue))
-          .map(item =>
-            <div key={item}>{item}</div>
+          .filter(todo => {
+            const title = todo.title.toLowerCase();
+            return title.startsWith(inValue.toLowerCase());
+          })
+          .map(todo =>
+            <div key={todo.id}>{todo.title}</div>
           )
       }
     </>
