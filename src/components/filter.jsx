@@ -4,7 +4,7 @@ let data = [];
 
 function Filter() {
   const [inValue, setInValue] = useState('');
-  
+
   useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/todos')
       .then(res => res.json())
@@ -13,21 +13,36 @@ function Filter() {
 
   return (
     <>
-      {/* input */}
+      {<Input inputState={inValue} handlechange={(e) => setInValue(e.target.value)} />}
+      {inValue && <Output todos={data} inputValue={inValue} />}
+    </>
+  )
+}
+
+// input
+function Input({ inputState, handlechange }) {
+  return (
+    <>
       <label htmlFor="serachInput">Serach</label>
       <input
         type="text"
-        value={inValue}
-        onChange={(e) => setInValue(e.target.value)}
+        value={inputState}
+        onChange={handlechange}
         name="serachInput"
       />
+    </>
+  )
+}
 
-      {/* Output */}
+// output
+function Output({ todos, inputValue }) {
+  return (
+    <>
       {
-        inValue && data
+        todos
           .filter(todo => {
             const title = todo.title.toLowerCase();
-            return title.startsWith(inValue.toLowerCase());
+            return title.startsWith(inputValue.toLowerCase());
           })
           .map(todo =>
             <div key={todo.id}>{todo.title}</div>
