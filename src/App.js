@@ -1,8 +1,17 @@
 import React from 'react';
 
-function App() {
+function App({data}) {
   const [user, setUser] = React.useState('Neck');
-  console.log(<h1 className='a'>jsx element</h1>)
+  console.log(<h1 className='a'>jsx element</h1>);
+  console.log(data);
+  const a = 'hello \
+  World \
+  ';
+
+  const t = `Hello 
+  World
+  `
+  console.log(a)
   return (
     <div style={divStyle}>
       You are in
