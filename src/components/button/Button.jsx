@@ -1,5 +1,5 @@
 import React from 'react'
-import ThemeContext from "../contexts/theme";
+import ThemeContext from "../../contexts/theme";
 
 class Button extends React.Component {
   static contextType = ThemeContext;
