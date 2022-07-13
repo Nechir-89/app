@@ -1,9 +1,7 @@
 import React from "react";
 import ThemeContext from "./contexts/theme";
 import UserContext from "./contexts/user";
-import NavBar from "./components/NavBar";
-
-
+import NavBar from "./components/navbar";
 
 function App() {
   return (
