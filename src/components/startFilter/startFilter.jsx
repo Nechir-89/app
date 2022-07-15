@@ -32,7 +32,10 @@ function Input({ inputState, handlechange }) {
         onChange={handlechange}
         name="serachInput"
       />
-      <SearchIcon />
+      <SearchIcon
+        className="search-icon"
+        fontSize="large"
+      />
     </div>
   )
 }
@@ -48,7 +51,7 @@ function Output({ todos, inputValue }) {
             return title.startsWith(inputValue.toLowerCase());
           })
           .map(todo =>
-            <div key={todo.id}>{todo.title}</div>
+            <div key={todo.id} className="item">{todo.title}</div>
           )
       }
     </>
