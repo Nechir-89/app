@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import './style.css'
 let data = [];
 
 function Filter() {
@@ -11,10 +12,10 @@ function Filter() {
   }, [])
 
   return (
-    <>
+    <section className="start-filter-wrapper">
       {<Input inputState={inValue} handlechange={(e) => setInValue(e.target.value)} />}
       {inValue && <Output todos={data} inputValue={inValue} />}
-    </>
+    </section>
   )
 }
 

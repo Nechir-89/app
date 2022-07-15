@@ -1,8 +1,9 @@
 import React from 'react';
+import './style.css'
 class DeepFilter extends React.Component{
   render(){
     return(
-      <section>
+      <section className="deep-filter-wrapper">
         Deep Filter
       </section>
     )
