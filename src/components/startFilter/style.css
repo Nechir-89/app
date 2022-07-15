@@ -2,4 +2,26 @@
   width: 50%;
   height: 100%;
   background-color: #231651;
+  padding: 2rem;
+}
+
+h1{
+  text-align: center;
+  color: #EFEFEF;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.input-wrapper{
+  display: flex;
+}
+
+.input-wrapper input{
+  width: 75%;
+  height: 2rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-size: 1.2rem;
+  padding: 0.5rem;
 }

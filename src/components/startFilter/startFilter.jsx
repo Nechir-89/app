@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react"
+import SearchIcon from '@mui/icons-material/Search';
 import './style.css'
+
 let data = [];
 
 function Filter() {
@@ -13,6 +15,7 @@ function Filter() {
 
   return (
     <section className="start-filter-wrapper">
+      <h1>Start Filter</h1>
       {<Input inputState={inValue} handlechange={(e) => setInValue(e.target.value)} />}
       {inValue && <Output todos={data} inputValue={inValue} />}
     </section>
@@ -22,15 +25,15 @@ function Filter() {
 // input
 function Input({ inputState, handlechange }) {
   return (
-    <>
-      <label htmlFor="serachInput">Serach</label>
+    <div className="input-wrapper">
       <input
         type="text"
         value={inputState}
         onChange={handlechange}
         name="serachInput"
       />
-    </>
+      <SearchIcon />
+    </div>
   )
 }
 
