@@ -1,0 +1,22 @@
+.input-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.search-icon {
+  color: white;
+  margin-left: 0.5rem;
+}
+
+.input-wrapper input {
+  width: 75%;
+  height: 2rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+}
+
+.input-wrapper input:focus {
+  outline: 2px solid #FF8484;
+}
