@@ -1,9 +1,11 @@
 import React from 'react';
-import Filter from './components/filter'
+import StartFilter from './components/startFilter'
+import DeepFilter from './components/deepFilter'
 function App() {
   return (
     <>
-      <Filter />
+      <StartFilter />
+      <DeepFilter />
     </>
   );
 }
