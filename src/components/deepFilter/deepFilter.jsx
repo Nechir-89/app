@@ -27,7 +27,7 @@ class DeepFilter extends React.Component {
     return (
       <section className="deep-filter-wrapper">
         <h1>Deep Filter</h1>
-        {<Input inputState={this.state.inValue} handlechange={this.handleChange()} />}
+        {<Input inputState={this.state.inValue} handlechange={this.handleChange()} filterType="deepFilter" />}
         {this.state.inValue && <Output todos={this.state.data} inputValue={this.state.inValue} filterType="deep" />}
       </section>
     )
