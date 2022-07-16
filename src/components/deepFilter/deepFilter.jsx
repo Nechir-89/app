@@ -18,15 +18,17 @@ class DeepFilter extends React.Component {
   }
   // cury method for handling events
   handleChange() {
-    return (event) => this.setState(prevState => ({ ...prevState, inValue: event.target.value }))
+    return (event) => this.setState(prevState => {
+      return { ...prevState, inValue: event.target.value }
+    })
   }
   render() {
     console.log(this.state.data)
     return (
       <section className="deep-filter-wrapper">
         <h1>Deep Filter</h1>
-        {<Input inputState={this.inValue} handlechange={this.handleChange} />}
-        {this.state.inValue && <Output todos={this.state.data} inputValue={this.state.inValue} />}
+        {<Input inputState={this.state.inValue} handlechange={this.handleChange()} />}
+        {this.state.inValue && <Output todos={this.state.data} inputValue={this.state.inValue} filterType="deep" />}
       </section>
     )
   }
