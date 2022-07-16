@@ -16,7 +16,7 @@ export default function Output({ todos, inputValue, filterType }) {
             const value = inputValue.toLowerCase();
             return title.indexOf(value) !== -1;
           })
-            .map(todo => <div key={todo.id} className="item">{todo.title}</div>)
+            .map(todo => <div key={todo.id} className="item deepfilter">{todo.title}</div>)
       }
     </div>
   );

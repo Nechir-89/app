@@ -19,7 +19,15 @@
   box-shadow: -1px 1px 6px rgb(114 92 185 / 50%);
 }
 
+.deepfilter{
+  color: #444444;
+}
+
 .item:hover {
   color: #FF8484;
   cursor: pointer;
+}
+
+.deepfilter:hover{
+  color: #222222;
 }
