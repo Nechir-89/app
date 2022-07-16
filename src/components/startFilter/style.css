@@ -5,7 +5,7 @@
   padding: 2rem;
 }
 
-h1 {
+.start-filter-wrapper > h1 {
   text-align: center;
   color: #EFEFEF;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
