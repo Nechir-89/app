@@ -18,7 +18,7 @@ function Filter() {
     <section className="start-filter-wrapper">
       <h1>Start Filter</h1>
       {<Input inputState={inValue} handlechange={(e) => setInValue(e.target.value)} />}
-      {inValue && <Output todos={data} inputValue={inValue} />}
+      {inValue && <Output todos={data} inputValue={inValue} filterType="start"/>}
     </section>
   )
 }
