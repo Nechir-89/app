@@ -23,7 +23,6 @@ class DeepFilter extends React.Component {
     })
   }
   render() {
-    console.log(this.state.data)
     return (
       <section className="deep-filter-wrapper">
         <h1>Deep Filter</h1>
