@@ -2,7 +2,7 @@
 import './style.css'
 export default function Output({ todos, inputValue, filterType }) {
   return (
-    <>
+    <div className="output-wrapper">
       {
         filterType === "start" ?
           todos.filter(todo => {
@@ -18,6 +18,6 @@ export default function Output({ todos, inputValue, filterType }) {
           })
             .map(todo => <div key={todo.id} className="item">{todo.title}</div>)
       }
-    </>
+    </div>
   );
 }
