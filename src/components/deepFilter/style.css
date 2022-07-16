@@ -2,4 +2,13 @@
   width: 50%;
   height: 100%;
   background-color: #FF8484;
+  padding: 2rem;
+}
+
+.deep-filter-wrapper > h1 {
+  text-align: center;
+  color: #231651;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 2rem;
+  margin-bottom: 2rem;
 }

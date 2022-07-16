@@ -1,10 +1,32 @@
 import React from 'react';
 import './style.css'
-class DeepFilter extends React.Component{
-  render(){
-    return(
+import Input from '../input';
+import Output from '../output';
+class DeepFilter extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      inValue: "",
+      data: []
+    };
+    this.handleChange = this.handleChange.bind(this);
+  }
+  componentDidMount() {
+    fetch('https://jsonplaceholder.typicode.com/todos')
+      .then(res => res.json())
+      .then(result => this.setState(prevState => ({ ...prevState, data: result })))
+  }
+  // cury method for handling events
+  handleChange() {
+    return (event) => this.setState(prevState => ({ ...prevState, inValue: event.target.value }))
+  }
+  render() {
+    console.log(this.state.data)
+    return (
       <section className="deep-filter-wrapper">
-        Deep Filter
+        <h1>Deep Filter</h1>
+        {<Input inputState={this.inValue} handlechange={this.handleChange} />}
+        {this.state.inValue && <Output todos={this.state.data} inputValue={this.state.inValue} />}
       </section>
     )
   }
